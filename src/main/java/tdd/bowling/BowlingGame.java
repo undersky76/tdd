@@ -2,14 +2,22 @@ package tdd.bowling;
 
 public class BowlingGame {
 
-	private int pins;
+	private int[] rolls = new int[21];
+	private int rollCount = 0;
 
 	public void roll(int pins) {
-		this.pins += pins;
+		rolls[rollCount] = pins;
+		rollCount++;
 	}
 
 	public int score() {
-		return this.pins;
+		int score = 0;
+		
+		for (int i = 0; i < rolls .length; i++) {
+			score += rolls[i];
+		}
+		
+		return score;
 	}
 
 }
