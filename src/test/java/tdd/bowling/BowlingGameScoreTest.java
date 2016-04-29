@@ -24,4 +24,17 @@ public class BowlingGameScoreTest {
 		assertThat(game.score(), is(0));
 	}
 
+	@Test
+	public void oneGame() {
+		BowlingGame game = new BowlingGame();
+		
+		game.roll(1);
+		
+		for (int i = 0; i < 20; i++) {
+			game.roll(0);	
+		}
+		
+		assertThat(game.score(), is(1));
+	}
+
 }
