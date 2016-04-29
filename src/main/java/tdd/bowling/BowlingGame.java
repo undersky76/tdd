@@ -12,8 +12,14 @@ public class BowlingGame {
 
 	public int score() {
 		int score = 0;
+		int i = 0;
 		
-		for (int i = 0; i < rolls .length; i++) {
+		if(rolls[0] + rolls[1] == 10) {
+			score = 10 + rolls[2];
+			i += 2;
+		}
+		
+		for (; i < rolls .length; i++) {
 			score += rolls[i];
 		}
 		
